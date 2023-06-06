@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
 import './ToDoList.css';
 import { CiCircleRemove } from 'react-icons/ci';
-import {TbIndentIncrease} from 'react-icons/tb'
-const ToDoList = () => {
+import {TbIndentIncrease} from 'react-icons/tb';
 
-    const [tasks, setTasks] = useState(
-        [
-            
-        ]);
+//external packages used are animate.css and react-icons
+
+const ToDoList = () => {
+    const [tasks, setTasks] = useState([]);
     const [modal, setModal] = useState(false)
     const [addTask, setAddTask] = useState()
     const [taskHeading, setTaskHeading] = useState()
+
+    //function to remove a task from the list
     const remove = (index) => {
         setTasks(tasks_old => {
             return tasks_old.filter((e, i) => i !== index);
         })
     }
+
+    //function to add a task to the list 
     const add = () => {
         setTasks([...tasks, {name: taskHeading , task: addTask, check: false }]);
         setModal(false);
     }
+
+    //function to update check status of a task
     const checked = (index) => {
         setTasks(tasks_old => {
             const tasks_new = tasks_old.map((obj, i) => {
