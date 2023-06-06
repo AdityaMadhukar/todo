@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ToDoList.css';
 import { CiCircleRemove } from 'react-icons/ci';
-import {TbIndentIncrease} from 'react-icons/tb';
+import { TbIndentIncrease } from 'react-icons/tb';
 
 //external packages used are animate.css and react-icons
 
@@ -20,7 +20,7 @@ const ToDoList = () => {
 
     //function to add a task to the list 
     const add = () => {
-        setTasks([...tasks, {name: taskHeading , task: addTask, check: false }]);
+        setTasks([...tasks, { name: taskHeading, task: addTask, check: false }]);
         setModal(false);
     }
 
@@ -29,7 +29,7 @@ const ToDoList = () => {
         setTasks(tasks_old => {
             const tasks_new = tasks_old.map((obj, i) => {
                 if (i == index) {
-                    return { name: tasks[index].name , task: tasks[index].task, check: !tasks[index].check }
+                    return { name: tasks[index].name, task: tasks[index].task, check: !tasks[index].check }
                 }
                 return obj;
             })
@@ -38,27 +38,25 @@ const ToDoList = () => {
     }
     return (
         <>
-        <h1 className='number'>{tasks.length}</h1>
+            <h1 className='number'>{tasks.length}</h1>
             {modal &&
                 <div className='Modal'>
                     <div className="AddTask">
-                        <span className='exit' onClick={()=>{setModal(false)}}><CiCircleRemove /></span>
-                        <input className='name' type="text" value={taskHeading} onChange={(e)=>{setTaskHeading(e.target.value)}} placeholder='Task Name'/>
-                        <textarea className='add' value={addTask} onChange={(e) => { setAddTask(e.target.value) }} placeholder='Task Description'/>
+                        <span className='exit' onClick={() => { setModal(false) }}><CiCircleRemove /></span>
+                        <input className='name' type="text" value={taskHeading} onChange={(e) => { setTaskHeading(e.target.value) }} placeholder='Task Name' />
+                        <textarea className='add' value={addTask} onChange={(e) => { setAddTask(e.target.value) }} placeholder='Task Description' />
                         <button className='submit' onClick={() => { add() }}>Add</button>
                     </div>
                 </div>
             }
             <div className='list'>
-                <div className="addicon" onClick={()=>{setModal(true)}}><TbIndentIncrease/></div>
-                
+                <div className="addicon" onClick={() => { setModal(true) }}><TbIndentIncrease /></div>
                 <h1 className='heading'>To Do List</h1>
-                
                 {tasks.map((e, index) => {
                     return (
                         <div className={`${tasks[index].check}`} >
                             <div className='checkbox'>
-                                <input type='checkbox' onChange={() => { checked(index) }} checked={tasks[index].check}/>
+                                <input type='checkbox' onChange={() => { checked(index) }} checked={tasks[index].check} />
                             </div>
                             <h4>{tasks[index].name}</h4>
                             <br />
