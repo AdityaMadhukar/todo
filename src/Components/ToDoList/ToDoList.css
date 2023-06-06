@@ -1,0 +1,125 @@
+.list{
+    background-color: rgba(0, 0, 0, 0.416);
+    width: 90vw;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.false{
+    width: 70vw;
+    position: relative;
+    min-height: 10vh;
+    background-color: rgba(11, 9, 9, 0.728);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10vw;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+    font-size: 1.2rem;
+    animation: bounceInLeft 1s forwards;
+}
+.true{
+    width: 70vw;
+    position: relative;
+    min-height: 10vh;
+    background-color: rgba(122, 227, 78, 0.728);
+    margin-top: 20px;
+    margin-left: 10vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 1%;
+    font-size: 1.2rem;
+    animation:bounceIn  1s  forwards ;
+}
+.checkbox{
+    position: absolute;
+    padding: 10px;
+    scale: 1.5;
+}
+.heading{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 3rem;
+    color: white;
+}
+.number{
+    padding:5px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+}
+.remove{
+    top: 2px;
+    right: 1px;
+    padding: 2px;
+    position: absolute;
+}
+.Modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.851);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeIn 1s forwards;
+}
+.name{
+    position: absolute;
+    top: 10%;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+}
+.AddTask{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    background-color: rgba(245, 203, 157, 0.343);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    width: 80%;
+    height: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+}
+.submit{
+    position: absolute;
+    bottom: 10%;
+    width: 10%;
+    height: 10%;
+    border-radius: 20%;
+    color: white;
+    background-color: rgb(63, 49, 49);
+}
+.addicon{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    scale: 2; 
+    filter: invert(1);
+}
+.addicon:hover{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    scale: 2.3;
+}
+.exit{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    scale: 2;
+    filter: invert(1);
+}
