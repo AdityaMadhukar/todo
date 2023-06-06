@@ -56,7 +56,8 @@ const ToDoList = () => {
                                 <input type='checkbox' onChange={() => { checked(index) }} checked={tasks[index].check}/>
                             </div>
                             <h4>{tasks[index].name}</h4>
-                            <p class="card-content">
+                            <br />
+                            <p class="taskDescription">
                                 {tasks[index].task}
                             </p>
                             <span className='remove' onClick={() => { remove(index) }}><CiCircleRemove /></span>

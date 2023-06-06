@@ -30,10 +30,12 @@
     text-align: center;
     padding-top: 1%;
     font-size: 1.2rem;
-    animation:bounceIn  1s  forwards ;
+    animation:bounceIn 1s forwards ;
 }
 .checkbox{
     position: absolute;
+    left: 0;
+    top: 0;
     padding: 10px;
     scale: 1.5;
 }
@@ -42,6 +44,10 @@
     padding-top: 30px;
     font-size: 3rem;
     color: white;
+}
+.taskDescription{
+    padding: 5px;
+    margin: 2px;
 }
 .number{
     padding:5px;
